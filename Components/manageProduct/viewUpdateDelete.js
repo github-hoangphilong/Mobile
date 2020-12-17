@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {StyleSheet,View, Text,Picker, TextInput, TouchableOpacity, Image} from 'react-native'
 
-export default class addFood extends Component {
+export default class viewUpdateDelete extends Component {
     state = {
         choosenIndex: 0
     };
@@ -14,7 +14,7 @@ export default class addFood extends Component {
                 <View style={{flex:3, backgroundColor:'#dfe4ea'}}>
                 <TouchableOpacity style={{backgroundColor:'#b2bec3',  marginTop:10, marginBottom:10, flex:1}}>
                     
-                        <Image source={require('../../assets/camera.png')} style={{marginLeft:100}}/>
+                        <Image source={require('../../assets/camera.png')} style={{marginLeft:130, marginTop:45}}/>
                     
                 </TouchableOpacity>
                  </View>
@@ -38,7 +38,7 @@ export default class addFood extends Component {
                     
                     <View style={{marginTop:20}}>
                          <Text style={{color:'black'}}> Loại sản phẩm:</Text>
-                         <Picker style={styles.pickerStyle}
+                         {/* <Picker style={styles.pickerStyle}
                             selectedValue={this.state.language}
                             color={this.state.language}
                             onValueChange={(itemValue, itemPosition) =>
@@ -47,12 +47,20 @@ export default class addFood extends Component {
                             <Picker.Item label="Java" value="java" />
                             <Picker.Item label="JavaScript" value="js" />
                             <Picker.Item label="React Native" value="rn" />
-                         </Picker>
+                         </Picker> */}
+                         <TextInput style={{marginLeft:104, borderBottomWidth:1, width:104, marginTop:-18}}></TextInput>
                     </View>
 
-                   <TouchableOpacity style={{ flex:1, backgroundColor:'#81ecec', justifyContent:'center', margin:10}}> 
-                                <Text style={{textAlign:'center', fontFamily:"Copperplate"}}>Thêm</Text>
+                
+                   <TouchableOpacity style={{backgroundColor:'white', marginRight: 247, marginLeft:30, marginTop:270,width:250}}>
+                       <Text style={{color:'black', fontFamily:"Copperplate"}}>Cập nhật</Text>
                    </TouchableOpacity>
+
+                   <TouchableOpacity style={{backgroundColor:'white', marginLeft:280, marginRight:30, marginTop:-18}}>
+                       <Text style={{color:'black', fontFamily:"Copperplate"}}>Xoá</Text>
+                   </TouchableOpacity>
+                   
+                   
 
                  </View>
                 

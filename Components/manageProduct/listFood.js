@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, TextInput, ScrollView } from 'react-native';
 
 export default class listFood extends Component {
   render() {
@@ -12,19 +12,35 @@ export default class listFood extends Component {
            <TextInput style={styles.textInput} placeholder='  Tìm món ăn o day' placeholderTextColor='black'></TextInput>
            <Image source={require('../../assets/magnifying-glass.png')} style={{marginLeft:5, width:15, height:15, marginTop:-17}}/>
           </View>
-           {/* <Image source={require('../../assets/magnifying-glass.png')}/> */}
-          
-          {/* <TextInput style={styles.textInput} placeholder='Tìm món ăn ở đây' placeholderTextColor='black'/> */}
         </View>
 
-
+      <ScrollView style={{marginRight:-20, marginLeft:-6}}>
         <View style={styles.cantainer}>
           <View style={styles.componentProduct}>
             <View style={styles.borderleft} />
             <Image style={styles.image} source={require('../../assets/download.jpeg')} />
             <View style={{ flex: 15}}>
-              <Text style={styles.text1}>Com tam</Text>
-              <Text style={{ paddingLeft: 5,  fontSize: 20, color:'black'  }}>Giá: 20000</Text>
+              <Text style={styles.text1}>Cơm tấm</Text>
+              <Text style={{ paddingLeft: 5,  fontSize: 20, color:'black'  }}>Giá: 20.000</Text>
+            </View>
+          </View>
+          <View style={{ marginTop: 30 }}>
+            <Text style={styles.line} />
+          </View>
+          <View>
+            <TouchableOpacity style={styles.touchableopacity}>
+              <Text style={{ textAlign: 'center', color: '#2FD5CF', fontWeight: 'bold' }}>Chọn</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View style={styles.cantainer}>
+          <View style={styles.componentProduct}>
+            <View style={styles.borderleft} />
+            <Image style={styles.image} source={require('../../assets/1.jpeg')} />
+            <View style={{ flex: 15 }}>
+              <Text style={styles.text1}>Cơm chiên</Text>
+              <Text style={{ paddingLeft: 5, fontSize: 20, color:'black' }}>Giá: 25.000</Text>
             </View>
           </View>
           <View style={{ marginTop: 30 }}>
@@ -41,18 +57,17 @@ export default class listFood extends Component {
         <View style={styles.cantainer}>
           <View style={styles.componentProduct}>
             <View style={styles.borderleft} />
-            <Image style={styles.image} source={require('../../assets/download.jpeg')} />
+            <Image style={styles.image} source={require('../../assets/2.jpeg')} />
             <View style={{ flex: 15 }}>
-              <Text style={styles.text1}>Com tam</Text>
-              <Text style={{ paddingLeft: 5, fontSize: 20, color:'black' }}>Giá:20000</Text>
+              <Text style={styles.text1}>Cơm xào bò</Text>
+              <Text style={{ paddingLeft: 5, fontSize: 20, color:'black' }}>Giá: 20.000</Text>
             </View>
           </View>
           <View style={{ marginTop: 30 }}>
             <Text style={styles.line} />
           </View>
           <View>
-            <TouchableOpacity style={styles.touchableopacity}
-            >
+            <TouchableOpacity style={styles.touchableopacity}>
               <Text style={{ textAlign: 'center', color: '#2FD5CF', fontWeight: 'bold' }}>Chọn</Text>
             </TouchableOpacity>
           </View>
@@ -61,22 +76,60 @@ export default class listFood extends Component {
         <View style={styles.cantainer}>
           <View style={styles.componentProduct}>
             <View style={styles.borderleft} />
-            <Image style={styles.image} source={require('../../assets/download.jpeg')} />
+            <Image style={styles.image} source={require('../../assets/3.jpeg')} />
             <View style={{ flex: 15 }}>
-              <Text style={styles.text1}>Com tam</Text>
-              <Text style={{ paddingLeft: 5, fontSize: 20, color:'black' }}>Giá:20000</Text>
+              <Text style={styles.text1}>Bún bò</Text>
+              <Text style={{ paddingLeft: 5, fontSize: 20, color:'black' }}>Giá: 22.000</Text>
             </View>
           </View>
           <View style={{ marginTop: 30 }}>
             <Text style={styles.line} />
           </View>
           <View>
-            <TouchableOpacity style={styles.touchableopacity}
-            >
+            <TouchableOpacity style={styles.touchableopacity}>
               <Text style={{ textAlign: 'center', color: '#2FD5CF', fontWeight: 'bold' }}>Chọn</Text>
             </TouchableOpacity>
           </View>
         </View>
+
+        <View style={styles.cantainer}>
+          <View style={styles.componentProduct}>
+            <View style={styles.borderleft} />
+            <Image style={styles.image} source={require('../../assets/4.jpeg')} />
+            <View style={{ flex: 15 }}>
+              <Text style={styles.text1}>Bò né</Text>
+              <Text style={{ paddingLeft: 5, fontSize: 20, color:'black' }}>Giá: 30.000</Text>
+            </View>
+          </View>
+          <View style={{ marginTop: 30 }}>
+            <Text style={styles.line} />
+          </View>
+          <View>
+            <TouchableOpacity style={styles.touchableopacity}>
+              <Text style={{ textAlign: 'center', color: '#2FD5CF', fontWeight: 'bold' }}>Chọn</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View style={styles.cantainer}>
+          <View style={styles.componentProduct}>
+            <View style={styles.borderleft} />
+            <Image style={styles.image} source={require('../../assets/5.jpeg')} />
+            <View style={{ flex: 15 }}>
+              <Text style={styles.text1}>Xôi mặn</Text>
+              <Text style={{ paddingLeft: 5, fontSize: 20, color:'black' }}>Giá: 12.000</Text>
+            </View>
+          </View>
+          <View style={{ marginTop: 30 }}>
+            <Text style={styles.line} />
+          </View>
+          <View>
+            <TouchableOpacity style={styles.touchableopacity}>
+              <Text style={{ textAlign: 'center', color: '#2FD5CF', fontWeight: 'bold' }}>Chọn</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+        </ScrollView>
       </View>
     )
   }
