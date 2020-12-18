@@ -9,4 +9,6 @@ import adminView from './Components/adminView';
 import addFood from './Components/manageProduct/addFood';
 import listFood from './Components/manageProduct/listFood';
 import viewUpdateDelete from './Components/manageProduct/viewUpdateDelete';
-AppRegistry.registerComponent(appName, () =>viewUpdateDelete);
+import viewUpdateCancel from './Components/manageProduct/viewUpdateCancel';
+import viewUpdateDeleteAlert from './Components/manageProduct/viewUpdateDeleteAlert';
+AppRegistry.registerComponent(appName, () =>viewUpdateDeleteAlert);

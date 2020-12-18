@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import {StyleSheet,View, Text,Picker, TextInput, TouchableOpacity, Image} from 'react-native'
 
 export default class viewUpdateDelete extends Component {
-    state = {
-        choosenIndex: 0
-    };
+    
 
     render() {
         return (
@@ -12,46 +10,38 @@ export default class viewUpdateDelete extends Component {
             <View style={styles.container}>
             
                 <View style={{flex:3, backgroundColor:'#dfe4ea'}}>
-                <TouchableOpacity style={{backgroundColor:'#b2bec3',  marginTop:10, marginBottom:10, flex:1}}>
-                    
-                        <Image source={require('../../assets/camera.png')} style={{marginLeft:130, marginTop:45}}/>
-                    
+                <TouchableOpacity style={{backgroundColor:'#b2bec3',  marginTop:10, marginBottom:10, flex:1}}>   
+                        <Image source={require('../../assets/download.jpeg')} style={{marginLeft:1, height:178, width: 400}}/>
                 </TouchableOpacity>
+
+                <View elevation={5} style={styles.it1}>
+                    <Text style={{color:'black'}}>Cơm tấm</Text>
+                </View>
                  </View>
             
 
                  <View style={{flex:7, backgroundColor:'white'}}>
                     <View style={{marginTop:20}}>
                          <Text style={{color:'black'}}> Mã:</Text>
-                         <TextInput style={styles.textInput}></TextInput>
+                         <Text style={styles.text}>CT001</Text>
                     </View>
 
                     <View style={{marginTop:20}}>
                          <Text style={{color:'black'}}> Giá:</Text>
-                         <TextInput style={styles.textInput}></TextInput>
+                         <Text style={styles.text}>20.000</Text>
                     </View>
 
                     <View style={{marginTop:20}}>
                          <Text style={{color:'black'}}> Tên:</Text>
-                         <TextInput style={styles.textInput}></TextInput>
+                         <Text style={styles.text1}>Cơm tấm</Text>
                     </View>
                     
                     <View style={{marginTop:20}}>
                          <Text style={{color:'black'}}> Loại sản phẩm:</Text>
-                         {/* <Picker style={styles.pickerStyle}
-                            selectedValue={this.state.language}
-                            color={this.state.language}
-                            onValueChange={(itemValue, itemPosition) =>
-                                this.setState({language: itemValue, choosenIndex: itemPosition})}
-                         >
-                            <Picker.Item label="Java" value="java" />
-                            <Picker.Item label="JavaScript" value="js" />
-                            <Picker.Item label="React Native" value="rn" />
-                         </Picker> */}
-                         <TextInput style={{marginLeft:104, borderBottomWidth:1, width:104, marginTop:-18}}></TextInput>
+            
+                         <Text style={{marginLeft:104, width:104, marginTop:-17, color:'black'}}>Món ăn</Text>
                     </View>
 
-                
                    <TouchableOpacity style={{backgroundColor:'white', marginRight: 247, marginLeft:30, marginTop:270,width:250}}>
                        <Text style={{color:'black', fontFamily:"Copperplate"}}>Cập nhật</Text>
                    </TouchableOpacity>
@@ -59,9 +49,6 @@ export default class viewUpdateDelete extends Component {
                    <TouchableOpacity style={{backgroundColor:'white', marginLeft:280, marginRight:30, marginTop:-18}}>
                        <Text style={{color:'black', fontFamily:"Copperplate"}}>Xoá</Text>
                    </TouchableOpacity>
-                   
-                   
-
                  </View>
                 
             </View>
@@ -87,13 +74,35 @@ const styles = StyleSheet.create ({
         
     },
 
-    textInput:{
-         color:'black',
-         height:'auto', 
-         width:100, 
-         borderBottomWidth:1,
+    text:{
+          color:'black',
          marginTop:-17,
          marginLeft:31,
-         
-    }
+    },
+
+    text1:{
+        color:'black',
+       marginTop:-17,
+       marginLeft:33,
+  },    
+
+  it1:{
+    borderRadius:10, 
+    borderWidth:0.5, 
+    backgroundColor:'white',
+    justifyContent:'center',
+    alignItems:'center',
+    padding:10,
+    marginLeft:100,
+    marginRight:100,
+    height:70,
+    marginBottom:5,
+    shadowColor: '#000000',
+       shadowOffset: {
+         width: 0,
+         height: 3
+       },
+       shadowRadius: 5,
+       shadowOpacity: 1.0,
+  },
 })
