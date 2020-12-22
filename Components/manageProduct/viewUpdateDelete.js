@@ -10,8 +10,8 @@ export default class viewUpdateDelete extends Component {
             <View style={styles.container}>
             
                 <View style={{flex:3, backgroundColor:'#dfe4ea'}}>
-                <TouchableOpacity style={{backgroundColor:'#b2bec3',  marginTop:10, marginBottom:10, flex:1}}>   
-                        <Image source={require('../../assets/download.jpeg')} style={{marginLeft:1, height:178, width: 400}}/>
+                <TouchableOpacity style={{backgroundColor:'#b2bec3',  marginTop:10, marginBottom:-64, flex:1}}>   
+                        <Image source={require('../../assets/download.jpeg')} style={{marginLeft:1, height:177, width: 410}}/>
                 </TouchableOpacity>
 
                 <View elevation={5} style={styles.it1}>
@@ -21,33 +21,35 @@ export default class viewUpdateDelete extends Component {
             
 
                  <View style={{flex:7, backgroundColor:'white'}}>
+                    <View style={{marginLeft:20}}>
                     <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Mã:</Text>
+                         <Text style={{color:'black', fontSize:20}}>Mã:</Text>
                          <Text style={styles.text}>CT001</Text>
                     </View>
 
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Giá:</Text>
+                    <View style={{marginTop:30}}>
+                         <Text style={{color:'black', fontSize:20}}>Giá:</Text>
                          <Text style={styles.text}>20.000</Text>
                     </View>
 
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Tên:</Text>
+                    <View style={{marginTop:35}}>
+                         <Text style={{color:'black', fontSize:20}}>Tên:</Text>
                          <Text style={styles.text1}>Cơm tấm</Text>
                     </View>
                     
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Loại sản phẩm:</Text>
+                    <View style={{marginTop:35}}>
+                         <Text style={{color:'black', fontSize:20}}>Loại sản phẩm:</Text>
             
-                         <Text style={{marginLeft:104, width:104, marginTop:-17, color:'black'}}>Món ăn</Text>
+                         <Text style={{marginLeft:140, width:104, marginTop:-21, color:'black'}}>Món ăn</Text>
                     </View>
-
-                   <TouchableOpacity style={{backgroundColor:'white', marginRight: 247, marginLeft:30, marginTop:270,width:250}}>
-                       <Text style={{color:'black', fontFamily:"Copperplate"}}>Cập nhật</Text>
+                    </View>
+                   
+                   <TouchableOpacity style={{backgroundColor:'#81ecec', marginRight: 247, marginLeft:60, marginTop:200,width:80, borderRadius:10, padding:5}}>
+                       <Text style={{color:'black', fontFamily:"Copperplate", paddingLeft:7}}>Cập nhật</Text>
                    </TouchableOpacity>
-
-                   <TouchableOpacity style={{backgroundColor:'white', marginLeft:280, marginRight:30, marginTop:-18}}>
-                       <Text style={{color:'black', fontFamily:"Copperplate"}}>Xoá</Text>
+                   
+                   <TouchableOpacity style={{backgroundColor:'#ff7675', marginLeft:265, marginRight:30, marginTop:-30, width:80, borderRadius:10, padding:5}}>
+                       <Text style={{color:'black', fontFamily:"Copperplate", paddingLeft:23}}>Xoá</Text>
                    </TouchableOpacity>
                  </View>
                 
@@ -76,14 +78,14 @@ const styles = StyleSheet.create ({
 
     text:{
           color:'black',
-         marginTop:-17,
-         marginLeft:31,
+         marginTop:-21,
+         marginLeft:39,
     },
 
     text1:{
         color:'black',
-       marginTop:-17,
-       marginLeft:33,
+       marginTop:-21,
+       marginLeft:42,
   },    
 
   it1:{

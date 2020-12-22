@@ -1,56 +1,56 @@
 import React, { Component } from 'react'
-import {StyleSheet,View, Text,Picker, TextInput, TouchableOpacity, Image} from 'react-native'
+import {StyleSheet,View, Text, Picker, TextInput, TouchableOpacity, Image} from 'react-native'
 
 export default class addFood extends Component {
     state = {
         choosenIndex: 0
     };
-
     render() {
         return (
             
             <View style={styles.container}>
             
                 <View style={{flex:3, backgroundColor:'#dfe4ea'}}>
-                <TouchableOpacity style={{backgroundColor:'#b2bec3',  marginTop:10, marginBottom:10, flex:1}}>
+                <TouchableOpacity style={{backgroundColor:'#b2bec3',  marginTop:9, marginBottom:10, flex:1}}>
                     
-                        <Image source={require('../../assets/camera.png')} style={{marginLeft:100}}/>
+                        <Image source={require('../../assets/9.png')} style={{marginLeft:170, marginTop:50}}/>
                     
                 </TouchableOpacity>
                  </View>
             
 
                  <View style={{flex:7, backgroundColor:'white'}}>
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Mã:</Text>
+                    <View style={{marginTop:20, marginLeft:20}}>
+                         <Text style={{color:'black', fontSize:20}}>Mã:</Text>
                          <TextInput style={styles.textInput}></TextInput>
                     </View>
 
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Giá:</Text>
+                    <View style={{marginTop:35, marginLeft:20}}>
+                         <Text style={{color:'black', fontSize:20}}>Giá:</Text>
                          <TextInput style={styles.textInput}></TextInput>
                     </View>
 
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Tên:</Text>
+                    <View style={{marginTop:35, marginLeft:20}}>
+                         <Text style={{color:'black', fontSize:20}}>Tên:</Text>
                          <TextInput style={styles.textInput}></TextInput>
                     </View>
                     
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Loại sản phẩm:</Text>
+                    <View style={{marginTop:35, marginLeft:20}}>
+                         <Text style={{color:'black', fontSize:20}}>Loại sản phẩm:</Text>
                          <Picker style={styles.pickerStyle}
                             selectedValue={this.state.language}
                             color={this.state.language}
                             onValueChange={(itemValue, itemPosition) =>
                                 this.setState({language: itemValue, choosenIndex: itemPosition})}
                          >
+                            <Picker.Item label="Select a kind of product" value="Select" />
                             <Picker.Item label="Java" value="java" />
                             <Picker.Item label="JavaScript" value="js" />
                             <Picker.Item label="React Native" value="rn" />
                          </Picker>
                     </View>
 
-                   <TouchableOpacity style={{ flex:1, backgroundColor:'#81ecec', justifyContent:'center', margin:10}}> 
+                   <TouchableOpacity style={styles.touchableOpacity}> 
                                 <Text style={{textAlign:'center', fontFamily:"Copperplate"}}>Thêm</Text>
                    </TouchableOpacity>
 
@@ -69,14 +69,9 @@ const styles = StyleSheet.create ({
     
     pickerStyle:{
         height: 24,
-        width: "50%",
-        backgroundColor:'#81ecec',
-        
-        borderRadius:50,
-        borderWidth:-1,
-        marginLeft:100,
-        marginTop:-20,
-        
+        width: "60%",
+        marginLeft:134,
+        marginTop:-24, 
     },
 
     textInput:{
@@ -84,8 +79,19 @@ const styles = StyleSheet.create ({
          height:'auto', 
          width:100, 
          borderBottomWidth:1,
-         marginTop:-17,
-         marginLeft:31,
+         marginTop:-50,
+         marginLeft:44,
          
-    }
+    },
+
+    touchableOpacity:{
+        flex:1, 
+        backgroundColor:'#81ecec', 
+        justifyContent:'center', 
+        marginTop:180, 
+        borderRadius:20, 
+        marginLeft:10, 
+        marginRight:10,
+        marginBottom:10,
+    },
 })

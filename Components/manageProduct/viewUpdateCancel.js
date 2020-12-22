@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {StyleSheet,
         View, 
-        Text,Picker, 
+        Text,
+        Picker, 
         TextInput, 
         TouchableOpacity, 
         Image} 
@@ -19,39 +20,39 @@ export default class viewUpdateCancel extends Component {
             
                 <View style={{flex:3, backgroundColor:'#dfe4ea'}}>
                     <TouchableOpacity style={{backgroundColor:'#b2bec3',  marginTop:1, marginBottom:-1, flex:1}}> 
-                        <Image source={require('../../assets/download.jpeg')} style={{marginLeft:1, height:166, width: 360}}/>
+                        <Image source={require('../../assets/download.jpeg')} style={{marginLeft:1, height:166, width: 410}}/>
                     </TouchableOpacity>
                 
                 <View>
-                    <TouchableOpacity style={{backgroundColor:'#b2bec3',  marginTop:1, marginBottom:6, flex:1}}> 
+                    <TouchableOpacity style={{backgroundColor:'#b2bec3',  marginTop:1, marginBottom:4.5, flex:1}}> 
                         <Image source={require('../../assets/picture.png')} style={{marginLeft:4, height:30, width: 30}}/>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={{marginLeft:40,marginRight:220}}>
-                        <Text style={{color:'black', marginBottom:7}}>Chọn hình</Text>
+                        <Text style={{color:'black', paddingBottom:7}}>Chọn hình</Text>
                     </TouchableOpacity>
                 </View>
             </View>
             
 
                  <View style={{flex:7, backgroundColor:'white'}}>
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Mã:</Text>
+                    <View style={{marginTop:20, marginLeft:20}}>
+                         <Text style={{color:'black', fontSize:20}}>Mã:</Text>
                          <TextInput style={styles.textInput}></TextInput>
                     </View>
 
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Giá:</Text>
+                    <View style={{marginTop:35, marginLeft:20}}>
+                         <Text style={{color:'black', fontSize:20}}>Giá:</Text>
                          <TextInput style={styles.textInput}></TextInput>
                     </View>
 
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Tên:</Text>
+                    <View style={{marginTop:38, marginLeft:20}}>
+                         <Text style={{color:'black', fontSize:20}}>Tên:</Text>
                          <TextInput style={styles.textInput}></TextInput>
                     </View>
                     
-                    <View style={{marginTop:20}}>
-                         <Text style={{color:'black'}}> Loại sản phẩm:</Text>
+                    <View style={{marginTop:38}}>
+                         <Text style={{color:'black', marginLeft:20, fontSize:20}}>Loại sản phẩm:</Text>
                          <Picker style={styles.pickerStyle}
                             selectedValue={this.state.language}
                             color={this.state.language}
@@ -64,14 +65,13 @@ export default class viewUpdateCancel extends Component {
                          </Picker>
                     </View>
 
-                    <TouchableOpacity style={{backgroundColor:'white', marginRight: 247, marginLeft:30, marginTop:270,width:250}}>
-                       <Text style={{color:'black', fontFamily:"Copperplate"}}>Cập nhật</Text>
+                    <TouchableOpacity style={{backgroundColor:'#81ecec', marginRight: 247, marginLeft:60, marginTop:190,width:80, borderRadius:10, padding:5}}>
+                       <Text style={{color:'black', fontFamily:"Copperplate", paddingLeft:7}}>Cập nhật</Text>
                    </TouchableOpacity>
-
-                   <TouchableOpacity style={{backgroundColor:'white', marginLeft:280, marginRight:33, marginTop:-20}}>
-                       <Text style={{color:'black', fontFamily:"Copperplate"}}>Huỷ</Text>
-                   </TouchableOpacity>                        
-
+                   
+                   <TouchableOpacity style={{backgroundColor:'#ff7675', marginLeft:265, marginRight:30, marginTop:-30, width:80, borderRadius:10, padding:5}}>
+                       <Text style={{color:'black', fontFamily:"Copperplate", paddingLeft:23}}>Huỷ</Text>
+                   </TouchableOpacity>
                  </View>
                 
             </View>
@@ -87,14 +87,9 @@ const styles = StyleSheet.create ({
     
     pickerStyle:{
         height: 24,
-        width: "50%",
-        backgroundColor:'#81ecec',
-        
-        borderRadius:50,
-        borderWidth:-1,
-        marginLeft:102,
-        marginTop:-20,
-        
+        width: "60%",
+        marginLeft:154,
+        marginTop:-24, 
     },
 
     textInput:{
@@ -102,8 +97,8 @@ const styles = StyleSheet.create ({
          height:'auto', 
          width:100, 
          borderBottomWidth:1,
-         marginTop:-17,
-         marginLeft:31,
+         marginTop:-55,
+         marginLeft:44,
          
     }
 })

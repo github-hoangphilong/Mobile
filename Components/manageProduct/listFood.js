@@ -8,10 +8,13 @@ export default class listFood extends Component {
 
         <View style={{ paddingBottom: 10, backgroundColor: 'white', alignItems: 'center', justifyContent: 'flex-start' }}>
           <Text style={{ color: 'black', fontWeight: 'bold', paddingTop: 6 }}>Quản lý sản phẩm</Text>
-         <View>
-           <TextInput style={styles.textInput} placeholder='  Tìm món ăn o day' placeholderTextColor='black'></TextInput>
-           <Image source={require('../../assets/magnifying-glass.png')} style={{marginLeft:5, width:15, height:15, marginTop:-17}}/>
-          </View>
+         <View >
+           <TextInput style={styles.textInput} placeholder='Tìm món ở đây' placeholderTextColor='black'></TextInput>
+         </View>
+        <TouchableOpacity>
+            <Image source={require('../../assets/magnifying-glass.png')} style={{marginLeft:-180, width:15, height:15, marginTop:-26}}/>
+        </TouchableOpacity>
+        
         </View>
 
       <ScrollView style={{marginRight:-20, marginLeft:-6}}>
@@ -47,8 +50,7 @@ export default class listFood extends Component {
             <Text style={styles.line} />
           </View>
           <View>
-            <TouchableOpacity style={styles.touchableopacity}
-            >
+            <TouchableOpacity style={styles.touchableopacity}>
               <Text style={{ textAlign: 'center', color: '#2FD5CF', fontWeight: 'bold' }}>Chọn</Text>
             </TouchableOpacity>
           </View>
@@ -129,6 +131,63 @@ export default class listFood extends Component {
             </TouchableOpacity>
           </View>
         </View>
+
+        <View style={styles.cantainer}>
+          <View style={styles.componentProduct}>
+            <View style={styles.borderleft} />
+            <Image style={styles.image} source={require('../../assets/6.jpeg')} />
+            <View style={{ flex: 15 }}>
+              <Text style={styles.text1}>Canh chua</Text>
+              <Text style={{ paddingLeft: 5, fontSize: 20, color:'black' }}>Giá: 15.000</Text>
+            </View>
+          </View>
+          <View style={{ marginTop: 30 }}>
+            <Text style={styles.line} />
+          </View>
+          <View>
+            <TouchableOpacity style={styles.touchableopacity}>
+              <Text style={{ textAlign: 'center', color: '#2FD5CF', fontWeight: 'bold' }}>Chọn</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View style={styles.cantainer}>
+          <View style={styles.componentProduct}>
+            <View style={styles.borderleft} />
+            <Image style={styles.image} source={require('../../assets/7.jpeg')} />
+            <View style={{ flex: 15 }}>
+              <Text style={styles.text1}>Gà rán</Text>
+              <Text style={{ paddingLeft: 5, fontSize: 20, color:'black' }}>Giá: 22.000</Text>
+            </View>
+          </View>
+          <View style={{ marginTop: 30 }}>
+            <Text style={styles.line} />
+          </View>
+          <View>
+            <TouchableOpacity style={styles.touchableopacity}>
+              <Text style={{ textAlign: 'center', color: '#2FD5CF', fontWeight: 'bold' }}>Chọn</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View style={styles.cantainer}>
+          <View style={styles.componentProduct}>
+            <View style={styles.borderleft} />
+            <Image style={styles.image} source={require('../../assets/8.jpeg')} />
+            <View style={{ flex: 15 }}>
+              <Text style={styles.text1}>7up</Text>
+              <Text style={{ paddingLeft: 5, fontSize: 20, color:'black' }}>Giá: 10.000</Text>
+            </View>
+          </View>
+          <View style={{ marginTop: 30 }}>
+            <Text style={styles.line} />
+          </View>
+          <View>
+            <TouchableOpacity style={styles.touchableopacity}>
+              <Text style={{ textAlign: 'center', color: '#2FD5CF', fontWeight: 'bold' }}>Chọn</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
         </ScrollView>
       </View>
     )
@@ -180,17 +239,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     borderRadius: 10,
-    marginRight: 10,
+    marginRight: 25,
     marginTop: 20,
     padding: 12
   },
  textInput:{
-  backgroundColor: '#d2dae2', 
-  paddingLeft: 180, 
-  paddingRight: 180, 
+  backgroundColor: '#67e6dc', 
+  paddingLeft: 110, 
+  paddingRight: 110, 
   paddingBottom:4,
   borderRadius: 20,
-  color:'black',
-  marginTop: 5
+  // color:'black',
+  marginTop: 5,
+  paddingTop:5,
+  marginLeft:-200,
+  marginRight:-200,
+  textAlign:'center',
  },
 });
